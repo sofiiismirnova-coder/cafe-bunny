@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     font-family: sans-serif;
+     background-color: #CE1065;
+     color: #FFEDED;
+}
+
+header {
+    background:#FFEDED;
+    padding: 15px 30px;
+
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header img {
+    width: 70px;
+    height: auto;
+}
+
+h1 {
+     color: #CE1065;
+     margin-top: 5px;
+     font-size: 35px;
+}
+
+.button {
+    background:#CE1065;
+    color: #FFEDED;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+nav {
+    background: #CE1065;
+    border-top: 3px solid #FFEDED;
+    border-bottom: 3px solid #FFEDED;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    list-style: none;
+    padding: 18px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFEDED;  
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+.about {
+    padding: 50px 20px;
+    background: #CE1065;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h2 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 28px;
+    color: #FFEDED;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content ul {
+    text-align: left;
+    flex: 1;
+    list-style: disc;
+    padding-left: 20px;
+    min-width: 350px;
+    max-width: 500px;
+}
+
+.about-content li {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.6;
+}
+
+.about-content img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #FFEDED;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+
+.about p {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.catalog-btn {
+    margin: 30px auto 0;
+    background: #FFEDED;
+    color: #CE1065;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: fit-content;
+    display: block;
+    max-width: 200px;
+    text-align: center;
+    line-height: 1;
+}
+
+
+footer {
+    background: #FFEDED;
+    color: #CE1065;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px; /* Додано відступи */
+}
+
+.media {
+    display: flex;
+    gap: 15px;
+}
+
+.media a {
+    text-decoration: none; /* Прибираємо підкреслення з посилань */
+}
+
+.media img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 8px; /* Заокруглені кути */
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.media img:last-child {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+
+footer p {
+    margin: 0; /* Прибираємо зайві відступи */
+    color: #CE1065;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Планшети */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    header img {
+        width: 150px;
+    }
+    
+    .button {
+        font-size: 14px;
+        padding: 6px 12px;
+        top: 20px;
+        right: 15px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 15px 8px;
+        min-width: 100px;
+    }
+    
+    .about {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    
+    .about h2 {
+        font-size: 24px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        max-width: 600px;
+    }
+    
+    .about-content ul {
+        min-width: auto;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .about-content img {
+        width: 220px;
+        order: -1;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .catalog-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .media {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Мобільні пристрої */
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+    }
+    
+    header img {
+        width: 120px;
+    }
+    
+    .button {
+        font-size: 12px;
+        padding: 5px 10px;
+        top: 15px;
+        right: 10px;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 12px 5px;
+        border-bottom: 1px solid #3e2723;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .about {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+    
+    .about h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .about-content {
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .about-content ul {
+        padding-left: 15px;
+        max-width: none;
+    }
+    
+    .about-content li {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    
+    .about-content img {
+        width: 180px;
+        order: -1;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    
+    .catalog-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    footer {
+        padding: 15px;
+    }
+    
+    .media img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    footer p {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Дуже маленькі екрани */
+@media (max-width: 320px) {
+    header img {
+        width: 100px;
+    }
+    
+    .button {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    .about h2 {
+        font-size: 18px;
+    }
+    
+    .about-content li {
+        font-size: 13px;
+    }
+    
+    .about-content img {
+        width: 140px;
+        order: -1;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .catalog-btn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
